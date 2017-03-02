@@ -119,7 +119,7 @@ IDUTILISATEUR
 /*==============================================================*/
 create table TARIFS (
    IDTARIF              SERIAL               not null,
-   LIEU                 VARCHAR(1)           not null,
+   LIEU                 VARCHAR(100)           not null,
    PRIX                 DECIMAL              null,
    constraint PK_TARIFS primary key (IDTARIF)
 );
@@ -136,9 +136,9 @@ IDTARIF
 /*==============================================================*/
 create table UTILISATEUR (
    IDUTILISATEUR        SERIAL               not null,
-   NOM                  VARCHAR(1)           not null,
-   PRENOM               VARCHAR(1)           not null,
-   TELEPHONE            VARCHAR(1)           not null,
+   NOM                  VARCHAR(100)           not null,
+   PRENOM               VARCHAR(100)           not null,
+   TELEPHONE            VARCHAR(100)           not null,
    constraint PK_UTILISATEUR primary key (IDUTILISATEUR)
 );
 
@@ -169,22 +169,7 @@ alter table RESERVATION
       references UTILISATEUR (IDUTILISATEUR)
       on delete restrict on update restrict;
 	  
-insert into CATEGORIE (CATEGORIE) values ("Voiture");
-insert into CATEGORIE (CATEGORIE) values ("Espace");
-insert into CATEGORIE (CATEGORIE) values ("Maison");
 
-insert into TARIFS (LIEU, PRIX) values ("Ville",100000);
-insert into TARIFS (LIEU, PRIX) values ("Peripherique",200000);
-
-insert into LOCATION (IDCATEGORIE,IDTARIF, DESCRIPTION) values (1,1,"Mitsubishi Pajero v98");
-insert into LOCATION (IDCATEGORIE,IDTARIF, DESCRIPTION) values (2,2,"Espace Mahafaly");
-insert into LOCATION (IDCATEGORIE,IDTARIF, DESCRIPTION) values (3,3,"Villa basse a Ambohibao");
-
-insert into UTILISATEUR (NOM, PRENOM, TELEPHONE) values ("Rakotoson","Luke","0334567890");
-insert into UTILISATEUR (NOM, PRENOM, TELEPHONE) values ("Jean","Marc","0344567890");
-
-insert into RESERVATION (IDUTILISATEUR,IDLOCATION, HEUREDEBUT, HEUREFIN, DATERESERVATION) values (1,1,"08:00","12:00","2017-03-15");
-insert into RESERVATION (IDUTILISATEUR,IDLOCATION, HEUREDEBUT, HEUREFIN, DATERESERVATION) values (2,1,"13:00","18:00","2017-03-15");
 
 
 
