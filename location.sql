@@ -1,38 +1,4 @@
 /*==============================================================*/
-/* Nom de SGBD :  PostgreSQL 8                                  */
-/* Date de création :  1/03/2017 09:30:11                       */
-/*==============================================================*/
-
-
-drop index CATEGORIE_PK;
-
-drop table CATEGORIE;
-
-drop index ASSOCIATION_2_FK;
-
-drop index ASSOCIATION_1_FK;
-
-drop index LOCATION_PK;
-
-drop table LOCATION;
-
-drop index ASSOCIATION_4_FK;
-
-drop index ASSOCIATION_3_FK;
-
-drop index RESERVATION_PK;
-
-drop table RESERVATION;
-
-drop index TARIFS_PK;
-
-drop table TARIFS;
-
-drop index UTILISATEUR_PK;
-
-drop table UTILISATEUR;
-
-/*==============================================================*/
 /* Table : CATEGORIE                                            */
 /*==============================================================*/
 create table CATEGORIE (
