@@ -3,7 +3,7 @@
 /*==============================================================*/
 create table CATEGORIE (
    IDCATEGORIE          SERIAL               not null,
-   CATEGORIE            VARCHAR(100)           null,
+   CATEGORIE            VARCHAR(100)         not null,
    constraint PK_CATEGORIE primary key (IDCATEGORIE)
 );
 
@@ -85,8 +85,8 @@ IDUTILISATEUR
 /*==============================================================*/
 create table TARIFS (
    IDTARIF              SERIAL               not null,
-   LIEU                 VARCHAR(100)           not null,
-   PRIX                 DECIMAL              null,
+   LIEU                 VARCHAR(100)         not null,
+   PRIX                 DECIMAL              not null,
    constraint PK_TARIFS primary key (IDTARIF)
 );
 
