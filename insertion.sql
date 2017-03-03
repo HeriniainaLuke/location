@@ -5,8 +5,8 @@ insert into CATEGORIE (CATEGORIE) values ('Maison');
 insert into TARIFS (LIEU, PRIX) values ('Ville',100000);
 insert into TARIFS (LIEU, PRIX) values ('Peripherique',200000);
 
-insert into UTILISATEUR (NOM, PRENOM, TELEPHONE) values ('Rakotoson','Luke','0334567890');
-insert into UTILISATEUR (NOM, PRENOM, TELEPHONE) values ('Jean','Marc','0344567890');
+insert into UTILISATEUR (NOM, PRENOM, TELEPHONE, USERNAME, PASSWORD) values ('Rakotoson','Luke','0334567890','luke',md5('luke'));
+insert into UTILISATEUR (NOM, PRENOM, TELEPHONE, USERNAME, PASSWORD) values ('Jean','Marc','0344567890','marc',md5('marc'));
 
 insert into LOCATION (IDCATEGORIE,IDTARIF, DESCRIPTION) values (1,1,'Mitsubishi Pajero v98');
 insert into LOCATION (IDCATEGORIE,IDTARIF, DESCRIPTION) values (2,2,'Espace Mahafaly');

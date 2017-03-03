@@ -1,3 +1,5 @@
+
+
 /*==============================================================*/
 /* Table : CATEGORIE                                            */
 /*==============================================================*/
@@ -85,7 +87,7 @@ IDUTILISATEUR
 /*==============================================================*/
 create table TARIFS (
    IDTARIF              SERIAL               not null,
-   LIEU                 VARCHAR(100)         not null,
+   LIEU                 VARCHAR(100)           not null,
    PRIX                 DECIMAL              not null,
    constraint PK_TARIFS primary key (IDTARIF)
 );
@@ -105,6 +107,8 @@ create table UTILISATEUR (
    NOM                  VARCHAR(100)           not null,
    PRENOM               VARCHAR(100)           not null,
    TELEPHONE            VARCHAR(100)           not null,
+   USERNAME             VARCHAR(100)         not null,
+   PASSWORD             TEXT                 not null,
    constraint PK_UTILISATEUR primary key (IDUTILISATEUR)
 );
 
@@ -134,8 +138,4 @@ alter table RESERVATION
    add constraint FK_RESERVAT_ASSOCIATI_UTILISAT foreign key (IDUTILISATEUR)
       references UTILISATEUR (IDUTILISATEUR)
       on delete restrict on update restrict;
-	  
-
-
-
 
